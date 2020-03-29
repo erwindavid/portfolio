@@ -17,7 +17,6 @@
         </header>
         <nav class="menu">
             <ul>
-                <li><a href="#logo">Home</a></li>
                 <li><a href="#about">About me</a></li>
                 <li><a href="#projects">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -73,12 +72,12 @@
         function openmenu() {
             if (menu.style.display === "block") {
                 menu.style.display = "none";
-                back.style.display = "none"
-                console.log(menu.style.display) 
+                back.style.display = "none";
+                console.log(menu.style.display);
             } else { 
-                menu.style.display = "block"
-                back.style.display = "block"
-                console.log(menu.style.display) 
+                menu.style.display = "block";
+                back.style.display = "block";
+                console.log(menu.style.display);
             }
         }
         //  -   -   -   -   EventListeners   -   -   -   -   //
@@ -87,7 +86,6 @@
                 menu.style.display = "none";
                 sidebarbtn.addEventListener('click', openmenu);
                 back.addEventListener('click', closemenu);
-                back.addEventListener('scroll', closemenu);
                 for (var i=0; i<nblinks; i++) {
                     var link = links.children[i].firstChild;
                     console.log(link.text);
