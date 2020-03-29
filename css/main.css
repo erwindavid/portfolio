@@ -3,10 +3,13 @@ body {
     font-family:Arial;
     margin:0;
 }
+
 /* SIDEBAR BUTTON */
 .sidebarbtn{
     padding:0.5em;
     font-size:30px; 
+    float:left;
+    margin-right:10px;
 }
 .sidebarbtn:hover{
     background:lightgray;
@@ -45,8 +48,8 @@ body {
 }
 /*    -    -    -    -    -    SMALL SCREEN    -    -    -    -    -    */
 @media screen and (max-width: 480px) {
-    header {
-        display:flex;
+    h2{
+        margin-top:20px;
     }
     @keyframes slidein {
         from {
@@ -105,10 +108,6 @@ body {
     .sidebarbtn{
         display:none;
     }
-    .space {
-        height:0.5px;
-    }
-
     .logo {
         padding:20px;
         padding-bottom: 5rem;
