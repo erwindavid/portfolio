@@ -1,110 +1,111 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <Link rel="stylesheet" type="text/css" href="css/main.css">
-  <title>Erwin David</title>
-</head>
-<body>
-    <div class="back"></div>
-    <header>
-        <div class="sidebarbtn">☰</div>
-        <div class="logo">
-            <div class="brand">Erwin David</div>
-            <div class="signature">DEVELOPER, DATA ENGINEER</div>
-        </div>
-    </header>
-    <nav class="menu">
-        <ul>
-            <li><a href="#logo">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#projects">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="contenu">
-        <div class="about"  id="about">
-            <div class="space"></div>
-            <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-            </p><p>Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue.
-            </p>
-        </div>
-        <div class="grid" id="projects">
-            <article>
-                <h2>Page title</h2>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <Link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>Erwin David</title>
+    </head>
+    <body>
+        <div class="back"></div>
+        <header>
+            <div class="sidebarbtn">☰</div>
+            <div class="logo">
+                <div class="brand">Erwin David</div>
+                <div class="signature">DEVELOPER, DATA ENGINEER</div>
+            </div>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#logo">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="contenu">
+            <div class="about"  id="about">
+                <div class="space"></div>
+                <h2>About me</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
                 </p><p>Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue.
                 </p>
-                <a href="JStest.html">projet</a>
-            </article>
-            <aside>
-                <h2>Projects</h2>
-                <ul>
-                    <li><div>Javascript</div></li>
-                    <li><div>Python</div></li>
-                    <li><div>R</div></li>
-                    <li><div>Data</div></li>
-                </ul>
-            </aside>
+            </div>
+            <div class="grid" id="projects">
+                <article>
+                    <h2>Page title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+                    </p><p>Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue.
+                    </p>
+                    <a href="JStest.html">projet</a>
+                </article>
+                <aside>
+                    <h2>Projects</h2>
+                    <ul>
+                        <li><div>Javascript</div></li>
+                        <li><div>Python</div></li>
+                        <li><div>R</div></li>
+                        <li><div>Data</div></li>
+                    </ul>
+                </aside>
+            </div>
         </div>
-    </div>
-    <script>
-    //  -   -   -   -   Variables   -   -   -   -   //
-    var menu = document.querySelector(".menu");
-    var sidebarbtn = document.querySelector(".sidebarbtn");
-    var back = document.querySelector(".back");
-    var links = document.querySelector(".menu ul");
-    var nblinks = document.querySelectorAll(".menu ul li").length;
-    //  -   -   -   -   Functions   -   -   -   -   //
-    //Get window size
-    function getwindowsize() {
-        console.log(window.innerWidth);
-        return window.innerWidth;
-    }
-    //masquer le menu vertical
-    function closemenu() {
-        menu.style.display = "none";
-        back.style.display = "none";
-        console.log(menu.style.display);
-    }
-    //afficher le menu vertical
-    function openmenu() {
-        if (menu.style.display === "block") {
-            menu.style.display = "none";
-            back.style.display = "none"
-            console.log(menu.style.display) 
-        } else { 
-            menu.style.display = "block"
-            back.style.display = "block"
-            console.log(menu.style.display) 
+        <script>
+        //  -   -   -   -   Variables   -   -   -   -   //
+        var menu = document.querySelector(".menu");
+        var sidebarbtn = document.querySelector(".sidebarbtn");
+        var back = document.querySelector(".back");
+        var links = document.querySelector(".menu ul");
+        var nblinks = document.querySelectorAll(".menu ul li").length;
+        //  -   -   -   -   Functions   -   -   -   -   //
+        //Get window size
+        function getwindowsize() {
+            console.log(window.innerWidth);
+            return window.innerWidth;
         }
-    }
-    //  -   -   -   -   EventListeners   -   -   -   -   //
-    function handlemenu() {
-        if ( getwindowsize() <= 480) { 
+        //masquer le menu vertical
+        function closemenu() {
             menu.style.display = "none";
-            sidebarbtn.addEventListener('click', openmenu);
-            back.addEventListener('click', closemenu);
-            for (var i=0; i<nblinks; i++) {
-                var link = links.children[i].firstChild;
-                console.log(link.text);
-                 link.addEventListener('click', closemenu);
-            }
-        } else {
-            menu.style.display = "block";
-            sidebarbtn.removeEventListener('click', openmenu);
-            back.removeEventListener('click', closemenu);
-            for (var i=0; i<nblinks; i++) {
-                var link = links.children[i].firstChild;
-                console.log(link.text);
-                 link.removeEventListener('click', closemenu);
+            back.style.display = "none";
+            console.log(menu.style.display);
+        }
+        //afficher le menu vertical
+        function openmenu() {
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+                back.style.display = "none"
+                console.log(menu.style.display) 
+            } else { 
+                menu.style.display = "block"
+                back.style.display = "block"
+                console.log(menu.style.display) 
             }
         }
-    }
-    window.addEventListener('resize',getwindowsize);
-    window.addEventListener('resize',handlemenu);
-    </script>
-</body>
+        //  -   -   -   -   EventListeners   -   -   -   -   //
+        function handlemenu() {
+            if ( getwindowsize() <= 480) { 
+                menu.style.display = "none";
+                sidebarbtn.addEventListener('click', openmenu);
+                back.addEventListener('click', closemenu);
+                for (var i=0; i<nblinks; i++) {
+                    var link = links.children[i].firstChild;
+                    console.log(link.text);
+                    link.addEventListener('click', closemenu);
+                }
+            } else {
+                menu.style.display = "block";
+                sidebarbtn.removeEventListener('click', openmenu);
+                back.removeEventListener('click', closemenu);
+                for (var i=0; i<nblinks; i++) {
+                    var link = links.children[i].firstChild;
+                    console.log(link.text);
+                    link.removeEventListener('click', closemenu);
+                }
+            }
+        }
+        window.addEventListener('resize',getwindowsize);
+        window.addEventListener('resize',handlemenu);
+        handlemenu();
+        </script>
+    </body>
 </html>
