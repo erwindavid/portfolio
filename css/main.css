@@ -3,9 +3,6 @@ body {
     font-family:Arial;
     margin:0;
 }
-h2 {
-    margin-top : 60px;
-}
 /* SIDEBAR BUTTON */
 .sidebarbtn{
     padding:0.5em;
@@ -25,8 +22,8 @@ h2 {
     font-size:200%;
 }
 .signature {
-    font-size:100%;
-    margin-top:-5px;
+    font-size:90%;
+    margin-top:-2px;
 }
 /* MENU/SIDEBAR */
 .menu {
@@ -95,6 +92,9 @@ h2 {
 }
 /*    -    -    -    -    -    LARGE SCREEN    -    -    -    -    -    */
 @media screen and (min-width: 480px) {
+    h2 {
+        margin-top : 60px;
+    }
     .menu {
         display:block;
         position:sticky;
