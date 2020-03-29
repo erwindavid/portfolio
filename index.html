@@ -96,7 +96,7 @@
                 menu.style.display = "block";
                 sidebarbtn.removeEventListener('click', openmenu);
                 back.removeEventListener('click', closemenu);
-                window.addEventListener('scroll', closemenu);
+                window.removeEventListener('scroll', closemenu);
                 for (var i=0; i<nblinks; i++) {
                     var link = links.children[i].firstChild;
                     console.log(link.text);
