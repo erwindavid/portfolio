@@ -87,7 +87,7 @@
                 menu.style.display = "none";
                 sidebarbtn.addEventListener('click', openmenu);
                 back.addEventListener('click', closemenu);
-                back.addEventListener('mouseover', closemenu);
+                back.addEventListener('scroll', closemenu);
                 for (var i=0; i<nblinks; i++) {
                     var link = links.children[i].firstChild;
                     console.log(link.text);
