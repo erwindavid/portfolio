@@ -1,13 +1,13 @@
 /* PAGE */
 body {
-    font-family:Arial;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0;
 }
 
 /* SIDEBAR BUTTON */
 .sidebarbtn{
     padding:0.5em;
-    font-size:30px; 
+    font-size:25px; 
     float:left;
     margin-right:10px;
 }
@@ -23,7 +23,7 @@ body {
 }
 .brand { 
     font-size:200%;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Sacramento', cursive;
 }
 .signature {
     font-size:90%;
@@ -53,7 +53,6 @@ body {
     h2{
         margin-top:30px;
     }
-
     @keyframes slidein {
         from {
           left: -400px;
