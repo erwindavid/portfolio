@@ -3,15 +3,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0;
 }
-
-/* SIDEBAR BUTTON */
-.sidebaropenbtn{
-    padding:0.5em;
-    font-size:25px; 
-    float:left;
-    margin-right:10px;
-    cursor:pointer;
-}
 /* LOGO */
 .logo {
     margin:0 auto;
@@ -27,7 +18,7 @@ body {
     margin-top:-10px;
     font-family: 'Open Sans', sans-serif;
 }
-/* MENU/SIDEBAR */
+/* MENU */
 .menu {
     background:black;
     margin:0;
@@ -52,7 +43,14 @@ body {
     h2{
         margin-top:30px;
     }
-    .sidebarclosebtn{
+    .menuopenbtn{
+        padding:0.5em;
+        font-size:25px; 
+        float:left;
+        margin-right:10px;
+        cursor:pointer;
+    }
+    .menuclosebtn{
         color:white;
         padding:10px;
         font-size:120%;
@@ -112,10 +110,7 @@ body {
         Top:0px;
         margin-bottom:30px;
     }
-    .sidebaropenbtn{
-        display:none;
-    }
-    .sidebarclosebtn{
+    .menuopenbtn, .menuclosebtn{
         display:none;
     }
     .logo {
