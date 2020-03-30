@@ -10,13 +10,14 @@
     <body>
         <div class="back"></div>
         <header>
-            <div class="sidebarbtn">☰</div>
+            <div class="menuopenbtn">☰</div>
             <div class="logo">
                 <div class="brand">Erwin David</div>
                 <div class="signature">DEVELOPER, DATA ENGINEER</div>
             </div>
         </header>
         <nav class="menu">
+            <div class="menuclosebtn">X</div>
             <ul>
                 <li><a href="#about">About me</a></li>
                 <li><a href="#projects">Portfolio</a></li>
@@ -53,7 +54,8 @@
         <script>
         //  -   -   -   -   Variables   -   -   -   -   //
         var menu = document.querySelector(".menu");
-        var sidebarbtn = document.querySelector(".sidebarbtn");
+        var menuopenbtn = document.querySelector(".menuopenbtn");
+        var menuclosebtn = document.querySelector(".menuclosebtn");
         var back = document.querySelector(".back");
         var links = document.querySelector(".menu ul");
         var nblinks = document.querySelectorAll(".menu ul li").length;
@@ -85,7 +87,8 @@
         function handlemenu() {
             if ( getwindowsize() <= 480) { 
                 menu.style.display = "none";
-                sidebarbtn.addEventListener('click', openmenu);
+                menuopenbtn.addEventListener('click', openmenu);
+                menuclosebtn.addEventListener('click', closemenu);
                 back.addEventListener('click', closemenu);
                 window.addEventListener('scroll', closemenu);
                 for (var i=0; i<nblinks; i++) {
@@ -95,7 +98,8 @@
                 }
             } else {
                 menu.style.display = "block";
-                sidebarbtn.removeEventListener('click', openmenu);
+                menubtn.removeEventListener('click', openmenu);
+                menuclosebtn.removeEventListener('click', closemenu);
                 back.removeEventListener('click', closemenu);
                 window.removeEventListener('scroll', closemenu);
                 for (var i=0; i<nblinks; i++) {
