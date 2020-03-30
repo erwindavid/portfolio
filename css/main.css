@@ -5,14 +5,11 @@ body {
 }
 
 /* SIDEBAR BUTTON */
-.sidebarbtn{
+.sidebaropenbtn{
     padding:0.5em;
     font-size:25px; 
     float:left;
     margin-right:10px;
-}
-.sidebarbtn:hover{
-    background:lightgray;
     cursor:pointer;
 }
 /* LOGO */
@@ -48,10 +45,18 @@ body {
 .menu > ul > li > a:hover {
     color:rgb(33,150,243);
 }
+
+
 /*    -    -    -    -    -    SMALL SCREEN    -    -    -    -    -    */
 @media screen and (max-width: 480px) {
     h2{
         margin-top:30px;
+    }
+    .sidebarclosebtn{
+        color:white;
+        padding:10px;
+        font-size:120%;
+        cursor:pointer;
     }
     @keyframes slidein {
         from {
@@ -107,7 +112,10 @@ body {
         Top:0px;
         margin-bottom:30px;
     }
-    .sidebarbtn{
+    .sidebaropenbtn{
+        display:none;
+    }
+    .sidebarclosebtn{
         display:none;
     }
     .logo {
