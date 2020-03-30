@@ -23,10 +23,12 @@ body {
 }
 .brand { 
     font-size:200%;
+    font-family: 'Pacifico', cursive;
 }
 .signature {
     font-size:90%;
-    margin-top:-2px;
+    margin-top:-10px;
+    font-family: 'Open Sans', sans-serif;
 }
 /* MENU/SIDEBAR */
 .menu {
@@ -49,8 +51,9 @@ body {
 /*    -    -    -    -    -    SMALL SCREEN    -    -    -    -    -    */
 @media screen and (max-width: 480px) {
     h2{
-        margin-top:20px;
+        margin-top:30px;
     }
+
     @keyframes slidein {
         from {
           left: -400px;
