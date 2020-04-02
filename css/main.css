@@ -204,9 +204,20 @@ aside > ul > li > div {
     font-size:110%;
     font-weight:bold;
     cursor: pointer;
+    display:inline;
+}
+.bellowCategory {
+    float:right;
+    border-radius: 5px;
+    background:grey;
+    font-size:smaller;
+    color:white;
+    margin:2px;
+    padding:2px;
+    cursor: pointer;
 }
 .bellowExpand {
-    height: 80vh;
+    height: 60vh;
 }
 .bellowContentWidth {
     width:100%;
