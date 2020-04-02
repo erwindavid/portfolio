@@ -108,7 +108,7 @@ body {
         position:sticky;
         Top:0px;
         margin-bottom:30px;
-        box-shadow: 0 0.25em 0.25em gray;
+      /*  box-shadow: 0 0.25em 0.25em gray;*/
     }
     .menuopenbtn, .menuclosebtn{
         display:none;
@@ -188,4 +188,30 @@ aside > ul > li > div {
     display:table-cell;
     text-align:left;
     vertical-align:bottom;
+}
+
+/* ACCORDION */
+.accordion {
+    border:1px solid grey;
+}
+.bellow {
+    border-top:1px solid grey;
+    overflow:hidden;
+    height: 22px;
+    transition: height 1s cubic-bezier(0.25, 1, 0.25, 1);
+}
+.bellowTitle {
+    font-size:110%;
+    font-weight:bold;
+    cursor: pointer;
+}
+.bellowExpand {
+    height: 80vh;
+}
+.bellowFold {
+    height: 20px;
+}
+.bellowContentWidth {
+    width:100%;
+    height:auto;
 }
