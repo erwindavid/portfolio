@@ -157,14 +157,21 @@
             bellow.addEventListener('click', function(){bellowExpandFold(bellow)});
         }
         //Expand / fold
-        function bellowExpandFold(target) { 
-        if (activeBellow) {
-            activeBellow.classList.add("bellowFold");
-            activeBellow.classList.remove("bellowExpand");
-            activeBellow.classList.remove("bellowFold");
-            };
-        target.classList.add("bellowExpand");
-        activeBellow = target;
+        function bellowExpandFold(target) {
+            if (!activeBellow) {
+                console.log("none");
+                target.classList.add("bellowExpand");
+                activeBellow = target;
+            } else if (activeBellow === target) {
+                console.log("same");
+                target.classList.remove("bellowExpand");
+                activeBellow = null;
+            } else {
+                console.log("new");
+                activeBellow.classList.remove("bellowExpand");
+                target.classList.add("bellowExpand");
+                activeBellow = target;
+            }
         }
     }
     //Init accordion
