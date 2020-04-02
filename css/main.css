@@ -191,20 +191,22 @@ aside > ul > li > div {
 }
 
 /* ACCORDION */
-.accordion {
-    border:1px solid grey;
-}
 .bellow {
     border-top:1px solid grey;
     overflow:hidden;
     height: 22px;
     transition: height 1s cubic-bezier(0.25, 1, 0.25, 1);
 }
+.bellowIcon {
+    display:inline;
+    cursor:pointer;
+    color:grey;
+}
 .bellowTitle {
+    display:inline;
     font-size:110%;
     font-weight:bold;
     cursor: pointer;
-    display:inline;
 }
 .bellowCategory {
     float:right;
