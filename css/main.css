@@ -206,7 +206,7 @@ aside > ul > li > div {
     cursor: pointer;
 }
 .bellowExpand {
-    height: 80vh;
+    height: 60vh;
 }
 .bellowFold {
     height: 20px;
