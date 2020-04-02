@@ -208,9 +208,6 @@ aside > ul > li > div {
 .bellowExpand {
     height: 60vh;
 }
-.bellowFold {
-    height: 20px;
-}
 .bellowContentWidth {
     width:100%;
     height:auto;
