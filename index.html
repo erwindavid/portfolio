@@ -55,6 +55,7 @@
                 <h2>Projects</h2>
                 <div class="accordion">
                     <div class="bellow">
+                        <div class="bellowIcon">►</div>
                         <div class="bellowTitle">Full image</div>
                         <div class="bellowCategory">media</div>
                         <div class="bellowContent">
@@ -63,6 +64,7 @@
                         </div>
                     </div>
                     <div class="bellow">
+                        <div class="bellowIcon">►</div>
                         <div class="bellowTitle">Just text section</div>
                         <div class="bellowCategory">text</div>
                         <div class="bellowContent">
@@ -79,6 +81,7 @@
                         </div>
                     </div>
                     <div class="bellow">
+                        <div class="bellowIcon">►</div>
                         <div class="bellowTitle">Locator</div>
                         <div class="bellowCategory">media</div>
                         <div class="bellowContent">
@@ -164,22 +167,20 @@
             if (!activeBellow) {
                 console.log("none");
                 target.classList.add("bellowExpand");
+                target.querySelector(".bellowIcon").textContent = "▼";
                 activeBellow = target;
-            } else if (target === activeBellow) {
+            } else if (activeBellow === target) {
                 console.log("same");
                 target.classList.remove("bellowExpand");
+                target.querySelector(".bellowIcon").textContent = "►";
                 activeBellow = null;
             } else {
                 console.log("new");
                 activeBellow.classList.remove("bellowExpand");
+                activeBellow.querySelector(".bellowIcon").textContent = "►";
                 target.classList.add("bellowExpand");
-                activeBellow = target;
-            }
-            //change icon
-            if (target === activeBellow) {
                 target.querySelector(".bellowIcon").textContent = "▼";
-            } else {
-                target.querySelector(".bellowIcon").textContent = "►";
+                activeBellow = target;
             }
         }
     }
