@@ -1,7 +1,8 @@
 /* PAGE */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin:0;
+   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+   font-family: serif;
+   margin:0;
 }
 /* LOGO */
 .logo {
@@ -194,7 +195,7 @@ aside > ul > li > div {
 .bellow {
     border-top:1px solid grey;
     overflow:hidden;
-    height: 22px;
+    height: 25px;
     transition: height 1s cubic-bezier(0.25, 1, 0.25, 1);
 }
 .bellowIcon {
@@ -207,9 +208,10 @@ aside > ul > li > div {
     font-size:110%;
     font-weight:bold;
     cursor: pointer;
+    padding:5px;
 }
 .bellowCategory {
-    float:right;
+    float:right
     border-radius: 5px;
     background:grey;
     font-size:smaller;
