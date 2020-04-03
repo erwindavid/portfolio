@@ -192,10 +192,14 @@ aside > ul > li > div {
 }
 
 /* ACCORDION */
+.accordion {
+    margin-bottom:10px;
+}
 .bellow {
     border-top:1px solid grey;
+    padding-top:10px;
     overflow:hidden;
-    height: 25px;
+    height: 30px;
     transition: height 1s cubic-bezier(0.25, 1, 0.25, 1);
 }
 .bellowIcon {
@@ -209,6 +213,7 @@ aside > ul > li > div {
     font-weight:bold;
     cursor: pointer;
     padding:5px;
+    padding-top:10px;
 }
 .bellowCategory {
     float:right;
@@ -223,7 +228,8 @@ aside > ul > li > div {
 .bellowExpand {
     height: 80vh;
 }
-.bellowContentWidth {
+.bellowContentMedia {
     width:100%;
+    margin-top:10px;
     height:auto;
 }
