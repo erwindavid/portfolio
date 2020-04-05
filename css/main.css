@@ -192,6 +192,10 @@ aside > ul > li > div {
 }
 
 /* ACCORDION */
+.accordionFilter {
+    display:flex;
+    justify-content:flex-end;
+}
 .accordion {
     margin-bottom:10px;
 }
@@ -215,7 +219,7 @@ aside > ul > li > div {
     padding:5px;
     padding-top:10px;
 }
-.bellowCategory {
+.bellowCategory, .bellowHiddenCategory {
     float:right;
     border-radius: 5px;
     background:grey;
@@ -225,8 +229,18 @@ aside > ul > li > div {
     padding:2px;
     cursor: pointer;
 }
+.bellowHiddenCategory {
+    background:lightgrey;
+    font-style: italic;
+}
+.resetAccordionFilter {
+    float:right;
+    cursor:pointer;
+    border-radius:5px;
+    border: 1px lightgrey dashed;
+}
 .bellowExpand {
-    height: 70vh;
+    height: 75vh;
 }
 .bellowContentMedia {
     width:100%;
