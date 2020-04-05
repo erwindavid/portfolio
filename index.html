@@ -53,6 +53,7 @@
                 -->
             <div id="projects"></div>
                 <h2>Projects</h2>
+                <div class="accordionFilter"></div>
                 <div class="accordion">
                     <div class="bellow">
                         <div class="bellowIcon">►</div>
@@ -153,16 +154,31 @@
         window.addEventListener('resize',handlemenu);
         handlemenu();
 
-    //Manage accordion
-    function initAccordion () {
+      //Manage accordion
+      function initAccordion () {
         let accordion = document.querySelector('.accordion');
         let bellows = document.querySelectorAll('.bellow');
+        let bellowIcons = document.querySelectorAll('.bellowIcon');
+        let bellowTitles =  document.querySelectorAll('.bellowTitle');
+        let bellowCategories = document.querySelectorAll('.bellowCategory');
+        let accordionFilter = document.querySelector('.accordionFilter');
+        let resetAccordionFilter = document.createElement('div');
+        resetAccordionFilter.classList.add('resetAccordionFilter')
+        accordionFilter.appendChild(resetAccordionFilter);
+        resetAccordionFilter.addEventListener('click', bellowShowAll);
         let activeBellow;
+        let hiddenBellows= [];
         for (let i=0; i<bellows.length; i++) {
             let bellow = bellows[i];
-            bellow.addEventListener('click', function(){bellowExpandFold(bellow)});
+            let bellowCategory = bellowCategories[i];
+            let bellowTitle = bellowTitles[i];
+            let bellowIcon= bellowIcons[i];
+            bellowIcon.addEventListener('click', function(){bellowExpandFold(bellow)});
+            bellowTitle.addEventListener('click', function(){bellowExpandFold(bellow)});
+            bellowCategory.addEventListener('click', function(){bellowHideOthers(bellow)});
         }
-        //Expand / fold
+
+        //Expand / fold clicked bellow
         function bellowExpandFold(target) {
             if (!activeBellow) {
                 console.log("none");
@@ -183,9 +199,45 @@
                 activeBellow = target;
             }
         }
+
+        //Hide unselected accordion bellows
+        function bellowHideOthers(target) {
+            resetAccordionFilter.textContent='';
+            hiddenBellows=[];
+            let targertBellow = target.querySelector('.bellowCategory');
+            let targertBellowCategory = targertBellow.textContent;
+            //hiding bellows
+            for (let j=0; j < bellows.length; j++) {
+                let assessedBellow = bellows[j].querySelector('.bellowCategory');
+                let assessedBellowCategory = assessedBellow.textContent;
+                if (assessedBellowCategory !== targertBellowCategory ) {
+                    bellows[j].style.display = 'none';
+                    hiddenBellows.push(assessedBellowCategory);
+                    hiddenBellows= [...new Set(hiddenBellows)];
+
+                }
+            }
+            //add filtered caregory names in top
+            for (k=0;k<hiddenBellows.length; k++) {
+                let filteredBellow = document.createElement('div');
+                filteredBellow.textContent=hiddenBellows[k];
+                filteredBellow.classList.add('bellowHiddenCategory');
+                 resetAccordionFilter.appendChild(filteredBellow);
+                }
+        }
+       
+        //Display hidden bellows and remove button
+        function bellowShowAll() {
+            for (let j=0; j < bellows.length; j++) {
+                bellows[j].style.display = 'block';
+            }
+            resetAccordionFilter.textContent='';
+        };
+
     }
     //Init accordion
     initAccordion();
+
 
         </script>
     </body>
